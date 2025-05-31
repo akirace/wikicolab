@@ -41,12 +41,20 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-2">
             {NAV_LINKS.map((link) => (
-              <Button key={link.href} variant="ghost" asChild className={`font-medium ${pathname === link.href ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`}>
-                <Link href={link.href}>{link.label}</Link>
+              <Button
+                key={link.href}
+                variant="ghost"
+                asChild
+                className={`font-medium ${pathname === link.href ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`}
+              >
+                {/* Diagnostic change: Replace Link with div */}
+                <div data-href={link.href}>
+                  <span>{link.label}</span>
+                </div>
               </Button>
             ))}
             <Button asChild className="ml-4 bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">Mulai Kolaborasi</Link> {/* Changed from Dapatkan Penawaran */}
+              <Link href="/contact"><span>Mulai Kolaborasi</span></Link>
             </Button>
           </div>
 
@@ -76,7 +84,7 @@ export function Navbar() {
                     </Link>
                   ))}
                   <Button asChild className="w-full mt-6 bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => setIsOpen(false)}>
-                    <Link href="/contact">Mulai Kolaborasi</Link> {/* Changed from Dapatkan Penawaran */}
+                    <Link href="/contact"><span>Mulai Kolaborasi</span></Link> 
                   </Button>
                 </div>
               </SheetContent>
