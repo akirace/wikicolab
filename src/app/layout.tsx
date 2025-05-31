@@ -6,6 +6,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster";
 import { AppProviders } from '@/components/layout/AppProviders';
+import { APP_NAME } from '@/lib/constants';
 
 // Using next/font as per best practices, despite guideline deviation for Google Fonts via <link>
 const poppins = Poppins({
@@ -22,10 +23,10 @@ const ptSans = PT_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Procurify Edge - Mitra Pengadaan Anda',
-    template: '%s | Procurify Edge',
+    default: `${APP_NAME} - Kolaborasi untuk Nusantara`,
+    template: `%s | ${APP_NAME}`,
   },
-  description: 'Procurify Edge menawarkan pengadaan barang dan jasa ahli, membangun kepercayaan klien dengan solusi yang andal dan efisien sejak 2024.',
+  description: `${APP_NAME} adalah platform kolaborasi untuk berbagi pengetahuan dan sumber daya demi kemajuan Nusantara.`,
 };
 
 export default function RootLayout({
@@ -40,16 +41,16 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} ${ptSans.variable} font-body antialiased flex flex-col min-h-screen`}>
         <AppProviders>
-          <Navbar />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-          <Toaster />
+          <div className="flex flex-col flex-grow">
+            <Navbar />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </AppProviders>
+        <Toaster />
       </body>
     </html>
   );
 }
-
-    

@@ -9,7 +9,7 @@ import { MotionDiv } from '@/components/shared/MotionDiv';
 
 export const metadata: Metadata = {
   title: 'Hubungi Kami',
-  description: `Hubungi ${APP_NAME}. Kami siap menjawab pertanyaan Anda dan membahas kebutuhan pengadaan Anda.`,
+  description: `Hubungi ${APP_NAME}. Kami siap mendengar ide kolaborasi Anda atau menjawab pertanyaan Anda.`,
 };
 
 export default function ContactPage() {
@@ -23,7 +23,7 @@ export default function ContactPage() {
             className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
           />
           <AnimatedText
-            text="Kami siap membantu Anda dengan semua kebutuhan pengadaan Anda. Hubungi kami hari ini!"
+            text={`Punya ide kolaborasi atau pertanyaan untuk ${APP_NAME}? Jangan ragu untuk menghubungi kami!`}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
             stagger={0.01}
             delay={0.3}
@@ -55,8 +55,8 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-medium">WhatsApp</h3>
-                    <a href={`https://wa.me/${CONTACT_DETAILS.whatsapp.replace(/\+/g, '')}`} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    <h3 className="font-medium">Telepon/WhatsApp</h3>
+                    <a href={`https://wa.me/${CONTACT_DETAILS.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                       {CONTACT_DETAILS.whatsapp}
                     </a>
                   </div>
@@ -64,7 +64,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-medium">Lokasi</h3>
+                    <h3 className="font-medium">Alamat</h3>
                     <p className="text-muted-foreground">{CONTACT_DETAILS.address}</p>
                   </div>
                 </div>
@@ -102,5 +102,3 @@ export default function ContactPage() {
     </div>
   );
 }
-
-    

@@ -1,15 +1,15 @@
 
 import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/shared/SectionWrapper';
-import { PORTFOLIO_DATA, APP_NAME } from '@/lib/constants';
+import { PORTFOLIO_DATA, APP_NAME } from '@/lib/constants'; // PORTFOLIO_DATA might need update
 import { PortfolioCard } from '@/components/portfolio/PortfolioCard';
 import { AnimatedText } from '@/components/shared/AnimatedText';
 import { MotionDiv } from '@/components/shared/MotionDiv';
 import { staggerContainerVariants } from '@/components/shared/SectionWrapper';
 
 export const metadata: Metadata = {
-  title: 'Portofolio Kami',
-  description: `Temukan pilihan proyek yang telah berhasil diselesaikan oleh ${APP_NAME}, menunjukkan keahlian dan komitmen kami terhadap kualitas.`,
+  title: 'Portofolio Proyek Kolaborasi',
+  description: `Temukan pilihan proyek kolaborasi yang telah berhasil diinisiasi atau didukung oleh ${APP_NAME}, menunjukkan semangat gotong royong dan inovasi.`,
 };
 
 export default function PortfolioPage() {
@@ -18,12 +18,12 @@ export default function PortfolioPage() {
       <SectionWrapper id="portfolio-hero" className="!pt-24 !pb-16 md:!pt-32 md:!pb-20 bg-gradient-to-b from-background via-blue-50 to-teal-50">
         <div className="text-center">
           <AnimatedText 
-            text="Rekam Jejak Terbukti Kami"
+            text="Kisah Sukses Kolaborasi Kami"
             el="h1"
             className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
           />
           <AnimatedText
-            text={`Jelajahi pameran proyek di mana ${APP_NAME} telah memberikan nilai dan hasil yang luar biasa. Setiap proyek mencerminkan dedikasi kami terhadap kualitas, efisiensi, dan kepuasan klien.`}
+            text={`Jelajahi pameran proyek di mana ${APP_NAME} telah memfasilitasi kolaborasi yang menghasilkan dampak positif. Setiap proyek mencerminkan dedikasi kami pada inovasi, kebersamaan, dan kemajuan Nusantara.`}
             className="text-lg text-muted-foreground max-w-3xl mx-auto"
             stagger={0.01}
             delay={0.3}
@@ -40,21 +40,19 @@ export default function PortfolioPage() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
           >
-            {PORTFOLIO_DATA.map((project) => (
+            {PORTFOLIO_DATA.map((project) => ( // PORTFOLIO_DATA content should be reviewed
               <PortfolioCard key={project.id} project={project} />
             ))}
           </MotionDiv>
         </SectionWrapper>
       ) : (
         <SectionWrapper id="no-projects" className="text-center">
-          <h2 className="text-2xl font-semibold mb-4">Portofolio Kami Sedang Berkembang!</h2>
+          <h2 className="text-2xl font-semibold mb-4">Portofolio Kolaborasi Kami Sedang Berkembang!</h2>
           <p className="text-muted-foreground">
-            Saat ini kami sedang menyusun pameran proyek kami. Silakan periksa kembali segera untuk melihat hasil kerja kami.
+            Saat ini kami sedang menyusun pameran proyek-proyek kolaborasi inspiratif. Silakan periksa kembali segera!
           </p>
         </SectionWrapper>
       )}
     </div>
   );
 }
-
-    

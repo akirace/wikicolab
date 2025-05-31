@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ShoppingBag } from 'lucide-react';
+import { Menu, X, Users } from 'lucide-react'; // Changed ShoppingBag to Users
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -34,7 +34,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2 text-2xl font-headline font-bold text-primary">
-            <ShoppingBag className="h-8 w-8" />
+            <Users className="h-8 w-8" /> {/* Changed Icon */}
             {APP_NAME}
           </Link>
 
@@ -46,7 +46,7 @@ export function Navbar() {
               </Button>
             ))}
             <Button asChild className="ml-4 bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">Dapatkan Penawaran</Link>
+              <Link href="/contact">Mulai Kolaborasi</Link> {/* Changed from Dapatkan Penawaran */}
             </Button>
           </div>
 
@@ -62,7 +62,7 @@ export function Navbar() {
               <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
                 <div className="flex flex-col space-y-6">
                   <Link href="/" className="flex items-center gap-2 text-2xl font-headline font-bold text-primary mb-6" onClick={() => setIsOpen(false)}>
-                     <ShoppingBag className="h-8 w-8" />
+                     <Users className="h-8 w-8" /> {/* Changed Icon */}
                     {APP_NAME}
                   </Link>
                   {NAV_LINKS.map((link) => (
@@ -76,7 +76,7 @@ export function Navbar() {
                     </Link>
                   ))}
                   <Button asChild className="w-full mt-6 bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => setIsOpen(false)}>
-                    <Link href="/contact">Dapatkan Penawaran</Link>
+                    <Link href="/contact">Mulai Kolaborasi</Link> {/* Changed from Dapatkan Penawaran */}
                   </Button>
                 </div>
               </SheetContent>
@@ -87,5 +87,3 @@ export function Navbar() {
     </motion.nav>
   );
 }
-
-    

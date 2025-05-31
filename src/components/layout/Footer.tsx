@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { APP_NAME, NAV_LINKS, CONTACT_DETAILS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ShoppingBag, Mail, Phone, MapPin } from 'lucide-react';
+import { Users, Mail, Phone, MapPin } from 'lucide-react'; // Changed ShoppingBag to Users
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,11 +14,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <Link href="/" className="flex items-center gap-2 text-xl font-headline font-bold text-primary mb-4">
-              <ShoppingBag className="h-7 w-7" />
+              <Users className="h-7 w-7" /> {/* Changed Icon */}
               {APP_NAME}
             </Link>
             <p className="text-sm">
-              Mitra tepercaya Anda untuk pengadaan barang dan jasa. Kami membangun kepercayaan klien melalui keandalan dan efisiensi.
+              Platform kolaborasi untuk berbagi pengetahuan dan memajukan Nusantara bersama.
             </p>
           </div>
 
@@ -46,8 +46,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <a href={`tel:${CONTACT_DETAILS.whatsapp}`} className="hover:text-primary transition-colors">
-                  {CONTACT_DETAILS.whatsapp} (WhatsApp)
+                <a href={`tel:${CONTACT_DETAILS.whatsapp.replace(/\D/g, '')}`} className="hover:text-primary transition-colors">
+                  {CONTACT_DETAILS.whatsapp}
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -59,7 +59,7 @@ export function Footer() {
           
           <div>
             <h3 className="text-lg font-headline font-semibold text-foreground mb-4">Buletin</h3>
-            <p className="text-sm mb-3">Tetap update dengan berita dan penawaran terbaru kami.</p>
+            <p className="text-sm mb-3">Tetap update dengan proyek dan inisiatif terbaru kami.</p>
             <form className="flex gap-2">
               <Input type="email" placeholder="Masukkan email Anda" className="bg-background" />
               <Button type="submit" variant="default" className="bg-primary hover:bg-primary/90">Berlangganan</Button>
@@ -74,5 +74,3 @@ export function Footer() {
     </footer>
   );
 }
-
-    

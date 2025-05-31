@@ -3,7 +3,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Zap } from 'lucide-react';
+import { ArrowRight, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { APP_NAME } from '@/lib/constants';
 import { AnimatedText } from '@/components/shared/AnimatedText';
@@ -43,7 +43,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          <Zap className="mx-auto h-16 w-16 text-primary mb-6" />
+          <Users className="mx-auto h-16 w-16 text-primary mb-6" />
         </motion.div>
 
         <AnimatedText 
@@ -59,7 +59,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
         >
-          Mitra tepercaya Anda untuk pengadaan barang dan jasa yang efisien. Kami membangun kepercayaan klien melalui keandalan dan solusi strategis.
+          Platform kolaborasi Anda untuk berbagi pengetahuan, mengembangkan ide, dan memajukan Nusantara bersama.
         </motion.p>
 
         <motion.div
@@ -69,12 +69,16 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-300">
-            <Link href="/services">
-              Jelajahi Layanan <ArrowRight className="ml-2 h-5 w-5" />
+            <Link href="/portfolio">
+              <span>
+                Lihat Proyek Kolaborasi <ArrowRight className="ml-2 h-5 w-5 inline" /> {/* Ensure ArrowRight is treated as inline content */}
+              </span>
             </Link>
           </Button>
           <Button size="lg" variant="outline" asChild className="bg-background/70 hover:bg-background shadow-lg transform hover:scale-105 transition-transform duration-300">
-            <Link href="/contact">Dapatkan Penawaran</Link>
+            <Link href="/contact">
+              <span>Mulai Berkontribusi</span>
+            </Link>
           </Button>
         </motion.div>
       </div>
@@ -82,4 +86,3 @@ export function HeroSection() {
   );
 }
 
-    

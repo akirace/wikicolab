@@ -5,11 +5,11 @@ import { AnimatedText } from '@/components/shared/AnimatedText';
 import { APP_NAME, TIMELINE_EVENTS } from '@/lib/constants';
 import { Eye, Target, Users, Zap } from 'lucide-react';
 import Image from 'next/image';
-import { BusinessTimeline } from '@/components/about/BusinessTimeline';
+import { BusinessTimeline } from '@/components/about/BusinessTimeline'; // This component might need content updates
 
 export const metadata: Metadata = {
   title: 'Tentang Kami',
-  description: `Pelajari tentang ${APP_NAME}, misi, visi, dan perjalanan kami dalam menyediakan layanan pengadaan terbaik.`,
+  description: `Pelajari tentang ${APP_NAME}, misi, visi, dan perjalanan kami dalam membangun platform kolaborasi untuk Nusantara.`,
 };
 
 export default function AboutPage() {
@@ -24,7 +24,7 @@ export default function AboutPage() {
               className="text-4xl md:text-5xl font-bold mb-6 tracking-tight"
             />
             <AnimatedText
-              text={`Didirikan pada awal tahun 2024, ${APP_NAME} berdedikasi untuk menyederhanakan kompleksitas pengadaan. Kami memberdayakan bisnis dengan menyediakan akses yang efisien ke barang dan jasa penting, mendorong pertumbuhan dan keunggulan operasional. Tim ahli kami berkomitmen untuk membangun kemitraan jangka panjang berdasarkan kepercayaan, transparansi, dan kesuksesan bersama.`}
+              text={`Didirikan pada awal tahun 2024, ${APP_NAME} berdedikasi untuk memfasilitasi kolaborasi dan berbagi pengetahuan di seluruh Nusantara. Kami memberdayakan individu dan komunitas dengan menyediakan platform untuk terhubung, berkreasi, dan berinovasi bersama demi kemajuan bersama.`}
               className="text-lg text-muted-foreground leading-relaxed"
               stagger={0.01}
               delay={0.3}
@@ -37,7 +37,7 @@ export default function AboutPage() {
               width={600} 
               height={450}
               className="rounded-xl shadow-2xl object-cover"
-              data-ai-hint="tim profesional"
+              data-ai-hint="tim kolaborasi beragam"
             />
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-semibold">Visi Kami</h2>
             </div>
             <AnimatedText
-              text="Menjadi mitra pengadaan terkemuka, yang diakui atas inovasi, keandalan, dan komitmen teguh terhadap kesuksesan klien di berbagai industri."
+              text="Menjadi platform kolaborasi terdepan yang menyatukan potensi Nusantara untuk inovasi dan kemajuan berkelanjutan."
               className="text-muted-foreground leading-relaxed"
               stagger={0.01}
             />
@@ -62,7 +62,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-semibold">Misi Kami</h2>
             </div>
             <AnimatedText
-              text="Memberikan solusi pengadaan yang luar biasa dengan memanfaatkan keahlian, teknologi, dan pendekatan yang berpusat pada klien, memastikan nilai, efisiensi, dan kepuasan dalam setiap transaksi."
+              text="Menyediakan ruang digital yang inklusif dan mudah diakses untuk berbagi ide, mengembangkan proyek, dan membangun jaringan yang kuat di seluruh Indonesia."
               className="text-muted-foreground leading-relaxed"
               stagger={0.01}
             />
@@ -70,9 +70,7 @@ export default function AboutPage() {
         </div>
       </SectionWrapper>
 
-      <BusinessTimeline />
+      <BusinessTimeline /> {/* Review content of TIMELINE_EVENTS in constants.ts */}
     </div>
   );
 }
-
-    

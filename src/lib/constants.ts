@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 import type { IconName } from '@/components/shared/IconByName';
 
-export const APP_NAME = "Procurify Edge";
+export const APP_NAME = "Wiki Colloborations Nusantara";
 
 export type NavLink = {
   href: string;
@@ -98,17 +98,15 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
 ];
 
 export const TIMELINE_EVENTS = [
-  { year: "Awal 2024", title: "Pendirian & Pembentukan", description: "Procurify Edge didirikan dengan misi untuk merevolusi layanan pengadaan." },
+  { year: "Awal 2024", title: "Pendirian & Pembentukan", description: `${APP_NAME} didirikan dengan misi untuk merevolusi layanan pengadaan.` },
   { year: "Pertengahan 2024", title: "Klien Besar Pertama", description: "Memperoleh kontrak signifikan pertama kami, menunjukkan kemampuan dan keandalan kami." },
   { year: "Akhir 2024", title: "Ekspansi Layanan", description: "Memperluas penawaran layanan kami untuk mencakup perbaikan khusus dan outsourcing staf." },
   { year: "Saat Ini", title: "Tumbuh Kuat", description: "Terus membangun kepercayaan dan memberikan keunggulan kepada portofolio klien yang terus berkembang." },
 ];
 
 export const CONTACT_DETAILS = {
-  email: "info@procurifyedge.com",
-  whatsapp: "+1234567890", // Ganti dengan nomor sebenarnya
-  address: "Jalan Pengadaan 123, Kota Bisnis, KB 12345",
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322839!2d106.81956131476966!3d-6.194741395512957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f427f9a4cf5f%3A0x2234493262258588!2sJakarta!5e0!3m2!1sen!2sid!4v1623743380000!5m2!1sen!2sid" // Contoh URL, ganti
+  email: "wikicollaborations@gmail.com",
+  whatsapp: "+6285352880958",
+  address: "Kiruntag, Jalan Raya Kelapa Dua, Kebon Jeruk Jakarta Barat",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.664086913662!2d106.7576923147695!3d-6.180169995527819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f71c84760931%3A0x9705f455a36a118!2sJl.%20Raya%20Kelapa%20Dua%2C%20Kb.%20Jeruk%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sen!2sid!4v1623743380000!5m2!1sen!2sid" // Updated Map URL for Kebon Jeruk, Jakarta Barat
 };
-
-    
