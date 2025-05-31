@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/shared/SectionWrapper';
 import { PORTFOLIO_DATA, APP_NAME } from '@/lib/constants';
@@ -7,8 +8,8 @@ import { MotionDiv } from '@/components/shared/MotionDiv';
 import { staggerContainerVariants } from '@/components/shared/SectionWrapper';
 
 export const metadata: Metadata = {
-  title: 'Our Portfolio',
-  description: `Discover a selection of successfully completed projects by ${APP_NAME}, showcasing our expertise and commitment to quality.`,
+  title: 'Portofolio Kami',
+  description: `Temukan pilihan proyek yang telah berhasil diselesaikan oleh ${APP_NAME}, menunjukkan keahlian dan komitmen kami terhadap kualitas.`,
 };
 
 export default function PortfolioPage() {
@@ -17,12 +18,12 @@ export default function PortfolioPage() {
       <SectionWrapper id="portfolio-hero" className="!pt-24 !pb-16 md:!pt-32 md:!pb-20 bg-gradient-to-b from-background via-blue-50 to-teal-50">
         <div className="text-center">
           <AnimatedText 
-            text="Our Proven Track Record"
+            text="Rekam Jejak Terbukti Kami"
             el="h1"
             className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
           />
           <AnimatedText
-            text={`Explore a showcase of projects where ${APP_NAME} has delivered exceptional value and results. Each project reflects our dedication to quality, efficiency, and client satisfaction.`}
+            text={`Jelajahi pameran proyek di mana ${APP_NAME} telah memberikan nilai dan hasil yang luar biasa. Setiap proyek mencerminkan dedikasi kami terhadap kualitas, efisiensi, dan kepuasan klien.`}
             className="text-lg text-muted-foreground max-w-3xl mx-auto"
             stagger={0.01}
             delay={0.3}
@@ -46,12 +47,14 @@ export default function PortfolioPage() {
         </SectionWrapper>
       ) : (
         <SectionWrapper id="no-projects" className="text-center">
-          <h2 className="text-2xl font-semibold mb-4">Our Portfolio is Growing!</h2>
+          <h2 className="text-2xl font-semibold mb-4">Portofolio Kami Sedang Berkembang!</h2>
           <p className="text-muted-foreground">
-            We are currently curating our project showcase. Please check back soon to see our work.
+            Saat ini kami sedang menyusun pameran proyek kami. Silakan periksa kembali segera untuk melihat hasil kerja kami.
           </p>
         </SectionWrapper>
       )}
     </div>
   );
 }
+
+    

@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { APP_NAME, NAV_LINKS, CONTACT_DETAILS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
@@ -17,12 +18,12 @@ export function Footer() {
               {APP_NAME}
             </Link>
             <p className="text-sm">
-              Your trusted partner for procurement of goods and services. We build client trust through reliability and efficiency.
+              Mitra tepercaya Anda untuk pengadaan barang dan jasa. Kami membangun kepercayaan klien melalui keandalan dan efisiensi.
             </p>
           </div>
 
           <div>
-            <h3 className="text-lg font-headline font-semibold text-foreground mb-4">Quick Links</h3>
+            <h3 className="text-lg font-headline font-semibold text-foreground mb-4">Tautan Cepat</h3>
             <ul className="space-y-2">
               {NAV_LINKS.slice(0,4).map((link) => ( // Show first 4 links
                 <li key={link.href}>
@@ -35,7 +36,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-headline font-semibold text-foreground mb-4">Contact Us</h3>
+            <h3 className="text-lg font-headline font-semibold text-foreground mb-4">Hubungi Kami</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
@@ -57,19 +58,21 @@ export function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-headline font-semibold text-foreground mb-4">Newsletter</h3>
-            <p className="text-sm mb-3">Stay updated with our latest news and offers.</p>
+            <h3 className="text-lg font-headline font-semibold text-foreground mb-4">Buletin</h3>
+            <p className="text-sm mb-3">Tetap update dengan berita dan penawaran terbaru kami.</p>
             <form className="flex gap-2">
-              <Input type="email" placeholder="Enter your email" className="bg-background" />
-              <Button type="submit" variant="default" className="bg-primary hover:bg-primary/90">Subscribe</Button>
+              <Input type="email" placeholder="Masukkan email Anda" className="bg-background" />
+              <Button type="submit" variant="default" className="bg-primary hover:bg-primary/90">Berlangganan</Button>
             </form>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/50 text-center text-sm">
-          <p>&copy; {currentYear} {APP_NAME}. All rights reserved.</p>
+          <p>&copy; {currentYear} {APP_NAME}. Hak cipta dilindungi.</p>
         </div>
       </div>
     </footer>
   );
 }
+
+    

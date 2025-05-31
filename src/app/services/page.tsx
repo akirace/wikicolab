@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/shared/SectionWrapper';
 import { SERVICES_DATA, APP_NAME } from '@/lib/constants';
@@ -8,8 +9,8 @@ import { staggerContainerVariants } from '@/components/shared/SectionWrapper';
 
 
 export const metadata: Metadata = {
-  title: 'Our Services',
-  description: `Explore the wide range of procurement and specialized services offered by ${APP_NAME}, including product sourcing, repairs, and staff outsourcing.`,
+  title: 'Layanan Kami',
+  description: `Jelajahi berbagai layanan pengadaan dan layanan khusus yang ditawarkan oleh ${APP_NAME}, termasuk pengadaan produk, perbaikan, dan outsourcing staf.`,
 };
 
 export default function ServicesPage() {
@@ -18,12 +19,12 @@ export default function ServicesPage() {
       <SectionWrapper id="services-hero" className="!pt-24 !pb-16 md:!pt-32 md:!pb-20 bg-gradient-to-b from-background via-blue-50 to-teal-50">
         <div className="text-center">
           <AnimatedText 
-            text="Comprehensive Procurement Solutions"
+            text="Solusi Pengadaan Komprehensif"
             el="h1"
             className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
           />
           <AnimatedText
-            text={`At ${APP_NAME}, we offer a diverse array of services to meet all your procurement needs. From sourcing top-quality products to providing specialized operational support, we are your one-stop solution.`}
+            text={`Di ${APP_NAME}, kami menawarkan beragam layanan untuk memenuhi semua kebutuhan pengadaan Anda. Mulai dari pengadaan produk berkualitas tinggi hingga penyediaan dukungan operasional khusus, kami adalah solusi satu atap Anda.`}
             className="text-lg text-muted-foreground max-w-3xl mx-auto"
             stagger={0.01}
             delay={0.3}
@@ -56,3 +57,5 @@ export default function ServicesPage() {
     </div>
   );
 }
+
+    

@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -45,7 +46,7 @@ export function Navbar() {
               </Button>
             ))}
             <Button asChild className="ml-4 bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="/contact">Get a Quote</Link>
+              <Link href="/contact">Dapatkan Penawaran</Link>
             </Button>
           </div>
 
@@ -55,7 +56,7 @@ export function Navbar() {
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <Menu className="h-6 w-6" />
-                  <span className="sr-only">Open menu</span>
+                  <span className="sr-only">Buka menu</span>
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
@@ -75,7 +76,7 @@ export function Navbar() {
                     </Link>
                   ))}
                   <Button asChild className="w-full mt-6 bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => setIsOpen(false)}>
-                    <Link href="/contact">Get a Quote</Link>
+                    <Link href="/contact">Dapatkan Penawaran</Link>
                   </Button>
                 </div>
               </SheetContent>
@@ -86,3 +87,5 @@ export function Navbar() {
     </motion.nav>
   );
 }
+
+    

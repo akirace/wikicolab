@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -46,7 +47,7 @@ export function HeroSection() {
         </motion.div>
 
         <AnimatedText 
-          text={`Welcome to ${APP_NAME}`}
+          text={`Selamat Datang di ${APP_NAME}`}
           el="h1"
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight"
           stagger={0.05}
@@ -58,7 +59,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
         >
-          Your trusted partner for efficient procurement of goods and services. We build client trust through reliability and strategic solutions.
+          Mitra tepercaya Anda untuk pengadaan barang dan jasa yang efisien. Kami membangun kepercayaan klien melalui keandalan dan solusi strategis.
         </motion.p>
 
         <motion.div
@@ -69,14 +70,16 @@ export function HeroSection() {
         >
           <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-300">
             <Link href="/services">
-              Explore Services <ArrowRight className="ml-2 h-5 w-5" />
+              Jelajahi Layanan <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
           <Button size="lg" variant="outline" asChild className="bg-background/70 hover:bg-background shadow-lg transform hover:scale-105 transition-transform duration-300">
-            <Link href="/contact">Get a Quote</Link>
+            <Link href="/contact">Dapatkan Penawaran</Link>
           </Button>
         </motion.div>
       </div>
     </section>
   );
 }
+
+    

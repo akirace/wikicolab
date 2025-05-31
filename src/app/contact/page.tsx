@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/shared/SectionWrapper';
 import { ContactForm } from '@/components/contact/ContactForm';
@@ -7,8 +8,8 @@ import { AnimatedText } from '@/components/shared/AnimatedText';
 import { MotionDiv } from '@/components/shared/MotionDiv';
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: `Get in touch with ${APP_NAME}. We're here to answer your questions and discuss your procurement needs.`,
+  title: 'Hubungi Kami',
+  description: `Hubungi ${APP_NAME}. Kami siap menjawab pertanyaan Anda dan membahas kebutuhan pengadaan Anda.`,
 };
 
 export default function ContactPage() {
@@ -17,12 +18,12 @@ export default function ContactPage() {
        <SectionWrapper id="contact-hero" className="!pt-24 !pb-16 md:!pt-32 md:!pb-20 bg-gradient-to-b from-background via-blue-50 to-teal-50">
         <div className="text-center">
           <AnimatedText 
-            text="Get In Touch"
+            text="Hubungi Kami"
             el="h1"
             className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
           />
           <AnimatedText
-            text="We're ready to assist you with all your procurement needs. Reach out to us today!"
+            text="Kami siap membantu Anda dengan semua kebutuhan pengadaan Anda. Hubungi kami hari ini!"
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
             stagger={0.01}
             delay={0.3}
@@ -40,7 +41,7 @@ export default function ContactPage() {
             className="space-y-8 p-8 bg-card border border-border rounded-xl shadow-lg"
           >
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
+              <h2 className="text-2xl font-semibold mb-6">Informasi Kontak</h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
@@ -63,14 +64,14 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-medium">Location</h3>
+                    <h3 className="font-medium">Lokasi</h3>
                     <p className="text-muted-foreground">{CONTACT_DETAILS.address}</p>
                   </div>
                 </div>
               </div>
             </div>
              <div className="mt-8">
-                <h3 className="text-xl font-semibold mb-3">Find Us On Map</h3>
+                <h3 className="text-xl font-semibold mb-3">Temukan Kami di Peta</h3>
                 <div className="aspect-video rounded-lg overflow-hidden border border-border">
                     <iframe
                         src={CONTACT_DETAILS.mapEmbedUrl}
@@ -80,7 +81,7 @@ export default function ContactPage() {
                         allowFullScreen={false}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="Google Maps Location"
+                        title="Lokasi Google Maps"
                     ></iframe>
                 </div>
             </div>
@@ -93,7 +94,7 @@ export default function ContactPage() {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
             className="p-8 bg-card border border-border rounded-xl shadow-lg"
           >
-            <h2 className="text-2xl font-semibold mb-6">Send Us a Message</h2>
+            <h2 className="text-2xl font-semibold mb-6">Kirim Pesan kepada Kami</h2>
             <ContactForm />
           </MotionDiv>
         </div>
@@ -101,3 +102,5 @@ export default function ContactPage() {
     </div>
   );
 }
+
+    

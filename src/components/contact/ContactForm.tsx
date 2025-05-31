@@ -14,10 +14,10 @@ import { Loader2 } from 'lucide-react';
 import { useState } from 'react';
 
 const formSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Please enter a valid email address." }),
-  subject: z.string().min(5, { message: "Subject must be at least 5 characters." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }).max(500, { message: "Message cannot exceed 500 characters." }),
+  name: z.string().min(2, { message: "Nama minimal harus 2 karakter." }),
+  email: z.string().email({ message: "Silakan masukkan alamat email yang valid." }),
+  subject: z.string().min(5, { message: "Subjek minimal harus 5 karakter." }),
+  message: z.string().min(10, { message: "Pesan minimal harus 10 karakter." }).max(500, { message: "Pesan tidak boleh melebihi 500 karakter." }),
 });
 
 export type ContactFormValues = z.infer<typeof formSchema>;
@@ -42,21 +42,21 @@ export function ContactForm() {
       const result = await handleContactFormSubmission(values);
       if (result.success) {
         toast({
-          title: "Message Sent!",
-          description: "Thank you for contacting us. We'll get back to you soon.",
+          title: "Pesan Terkirim!",
+          description: "Terima kasih telah menghubungi kami. Kami akan segera menghubungi Anda kembali.",
         });
         form.reset();
       } else {
         toast({
           title: "Error",
-          description: result.error || "Failed to send message. Please try again.",
+          description: result.error || "Gagal mengirim pesan. Silakan coba lagi.",
           variant: "destructive",
         });
       }
     } catch (error) {
       toast({
         title: "Error",
-        description: "An unexpected error occurred. Please try again.",
+        description: "Terjadi kesalahan tak terduga. Silakan coba lagi.",
         variant: "destructive",
       });
     } finally {
@@ -72,9 +72,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Full Name</FormLabel>
+              <FormLabel>Nama Lengkap</FormLabel>
               <FormControl>
-                <Input placeholder="John Doe" {...field} />
+                <Input placeholder="Budi Santoso" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -85,9 +85,9 @@ export function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Email Address</FormLabel>
+              <FormLabel>Alamat Email</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="you@example.com" {...field} />
+                <Input type="email" placeholder="anda@contoh.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -98,9 +98,9 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>Subjek</FormLabel>
               <FormControl>
-                <Input placeholder="Regarding your services..." {...field} />
+                <Input placeholder="Mengenai layanan Anda..." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -111,9 +111,9 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Pesan</FormLabel>
               <FormControl>
-                <Textarea placeholder="Your message here..." {...field} rows={5} />
+                <Textarea placeholder="Pesan Anda di sini..." {...field} rows={5} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -123,13 +123,15 @@ export function ContactForm() {
           {isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending...
+              Mengirim...
             </>
           ) : (
-            "Send Message"
+            "Kirim Pesan"
           )}
         </Button>
       </form>
     </Form>
   );
 }
+
+    

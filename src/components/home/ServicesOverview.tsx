@@ -11,9 +11,9 @@ export function ServicesOverview() {
   return (
     <SectionWrapper id="services-overview" className="bg-background">
       <div className="text-center mb-12 md:mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Our Core Services</h2>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Layanan Inti Kami</h2>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-          We provide a comprehensive suite of procurement solutions designed to meet your business needs efficiently and effectively.
+          Kami menyediakan rangkaian solusi pengadaan komprehensif yang dirancang untuk memenuhi kebutuhan bisnis Anda secara efisien dan efektif.
         </p>
       </div>
 
@@ -43,3 +43,5 @@ export function ServicesOverview() {
     </SectionWrapper>
   );
 }
+
+    

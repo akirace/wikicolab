@@ -1,6 +1,7 @@
+
 "use client";
 
-import { WHY_CHOOSE_US_POINTS } from '@/lib/constants';
+import { WHY_CHOOSE_US_POINTS, APP_NAME } from '@/lib/constants';
 import { SectionWrapper, staggerContainerVariants, fadeInItemVariants } from '@/components/shared/SectionWrapper';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -17,18 +18,18 @@ export function WhyChooseUs() {
         >
           <Image 
             src="https://placehold.co/600x500.png" 
-            alt="Team collaborating on procurement strategy" 
+            alt="Tim berkolaborasi dalam strategi pengadaan" 
             width={600} 
             height={500}
             className="rounded-lg shadow-2xl object-cover"
-            data-ai-hint="team meeting"
+            data-ai-hint="rapat tim"
           />
         </motion.div>
         <div>
           <div className="mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Why Procurify Edge?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Mengapa {APP_NAME}?</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Experience the difference with our client-centric approach and commitment to excellence.
+              Rasakan perbedaannya dengan pendekatan kami yang berpusat pada klien dan komitmen terhadap keunggulan.
             </p>
           </div>
           <motion.ul 
@@ -55,3 +56,5 @@ export function WhyChooseUs() {
     </SectionWrapper>
   );
 }
+
+    

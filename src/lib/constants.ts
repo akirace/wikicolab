@@ -28,11 +28,11 @@ export type NavLink = {
 };
 
 export const NAV_LINKS: NavLink[] = [
-  { href: '/', label: 'Home', icon: Home },
-  { href: '/about', label: 'About Us', icon: Info },
-  { href: '/services', label: 'Services', icon: Briefcase },
-  { href: '/portfolio', label: 'Portfolio', icon: LayoutGrid },
-  { href: '/contact', label: 'Contact', icon: Mail },
+  { href: '/', label: 'Beranda', icon: Home },
+  { href: '/about', label: 'Tentang Kami', icon: Info },
+  { href: '/services', label: 'Layanan', icon: Briefcase },
+  { href: '/portfolio', label: 'Portofolio', icon: LayoutGrid },
+  { href: '/contact', label: 'Kontak', icon: Mail },
 ];
 
 // This type is used by CORE_SERVICES_OVERVIEW and SERVICES_DATA (via ServiceCategory)
@@ -49,36 +49,36 @@ export type ServiceCategory = {
 };
 
 export const CORE_SERVICES_OVERVIEW: ServiceItem[] = [
-  { name: "Product Procurement", description: "Sourcing high-quality products tailored to your business needs, from IT equipment to office essentials.", iconName: "ShoppingCart" },
-  { name: "Expert Repair Services", description: "Reliable and efficient repair services for laptops, MacBooks, and other critical equipment.", iconName: "Wrench" },
-  { name: "Staff Outsourcing", description: "Providing skilled and vetted drivers and cleaning staff to support your operations seamlessly.", iconName: "Users" },
+  { name: "Pengadaan Produk", description: "Pengadaan produk berkualitas tinggi yang disesuaikan dengan kebutuhan bisnis Anda, mulai dari peralatan IT hingga kebutuhan kantor.", iconName: "ShoppingCart" },
+  { name: "Layanan Perbaikan Ahli", description: "Layanan perbaikan yang andal dan efisien untuk laptop, MacBook, dan peralatan penting lainnya.", iconName: "Wrench" },
+  { name: "Outsourcing Staf", description: "Menyediakan pengemudi dan staf kebersihan yang terampil dan terverifikasi untuk mendukung operasional Anda dengan lancar.", iconName: "Users" },
 ];
 
 export const SERVICES_DATA: ServiceCategory[] = [
   {
-    category: "Product Procurement",
+    category: "Pengadaan Produk",
     items: [
-      { name: "Air Conditioners", description: "Efficient and reliable AC units for optimal climate control.", iconName: "AirVent", imageHint: "air conditioner unit" },
-      { name: "Laptops & Computers", description: "A wide range of laptops and desktops for all professional needs.", iconName: "Laptop", imageHint: "modern laptop" },
-      { name: "Office Furniture", description: "Ergonomic and stylish furniture to create productive workspaces.", iconName: "Armchair", imageHint: "office chair desk" },
+      { name: "Pendingin Ruangan (AC)", description: "Unit AC yang efisien dan andal untuk kontrol iklim optimal.", iconName: "AirVent", imageHint: "unit pendingin ruangan" },
+      { name: "Laptop & Komputer", description: "Berbagai macam laptop dan desktop untuk semua kebutuhan profesional.", iconName: "Laptop", imageHint: "laptop modern" },
+      { name: "Furnitur Kantor", description: "Furnitur ergonomis dan bergaya untuk menciptakan ruang kerja yang produktif.", iconName: "Armchair", imageHint: "kursi meja kantor" },
     ]
   },
   {
-    category: "Specialized Services",
+    category: "Layanan Khusus",
     items: [
-      { name: "Laptop/MacBook Repair", description: "Expert repairs for all major brands, ensuring minimal downtime.", iconName: "Wrench", imageHint: "laptop repair tools" },
-      { name: "AC Cleaning & Maintenance", description: "Comprehensive AC cleaning services for improved air quality and efficiency.", iconName: "Sparkles", imageHint: "cleaning ac unit" },
-      { name: "Driver Staff Outsourcing", description: "Professional and reliable drivers for your transportation needs.", iconName: "Car", imageHint: "professional driver car" },
-      { name: "Cleaning Staff Outsourcing", description: "Dedicated cleaning personnel for maintaining pristine environments.", iconName: "Users", imageHint: "cleaning team" },
+      { name: "Perbaikan Laptop/MacBook", description: "Perbaikan ahli untuk semua merek utama, memastikan waktu henti minimal.", iconName: "Wrench", imageHint: "alat perbaikan laptop" },
+      { name: "Pembersihan & Perawatan AC", description: "Layanan pembersihan AC komprehensif untuk kualitas udara dan efisiensi yang lebih baik.", iconName: "Sparkles", imageHint: "membersihkan unit ac" },
+      { name: "Outsourcing Staf Pengemudi", description: "Pengemudi profesional dan andal untuk kebutuhan transportasi Anda.", iconName: "Car", imageHint: "pengemudi mobil profesional" },
+      { name: "Outsourcing Staf Kebersihan", description: "Personel kebersihan berdedikasi untuk menjaga lingkungan tetap bersih.", iconName: "Users", imageHint: "tim kebersihan" },
     ]
   }
 ];
 
 export const WHY_CHOOSE_US_POINTS: { title: string; description: string; icon: LucideIcon }[] = [
-  { title: "Reliable Sourcing", description: "Access to a wide network of trusted suppliers for quality assurance.", icon: CheckCircle2, },
-  { title: "Cost-Effective Solutions", description: "Competitive pricing and value-driven procurement strategies.", icon: CheckCircle2, },
-  { title: "Expert Support", description: "Dedicated team providing personalized service and timely assistance.", icon: CheckCircle2, },
-  { title: "Timely Delivery", description: "Efficient logistics ensuring your goods and services are delivered on schedule.", icon: CheckCircle2, },
+  { title: "Sumber Terpercaya", description: "Akses ke jaringan luas pemasok tepercaya untuk jaminan kualitas.", icon: CheckCircle2, },
+  { title: "Solusi Hemat Biaya", description: "Harga kompetitif dan strategi pengadaan berbasis nilai.", icon: CheckCircle2, },
+  { title: "Dukungan Ahli", description: "Tim berdedikasi yang menyediakan layanan personal dan bantuan tepat waktu.", icon: CheckCircle2, },
+  { title: "Pengiriman Tepat Waktu", description: "Logistik efisien memastikan barang dan layanan Anda dikirim sesuai jadwal.", icon: CheckCircle2, },
 ];
 
 export type PortfolioItem = {
@@ -91,22 +91,24 @@ export type PortfolioItem = {
 };
 
 export const PORTFOLIO_DATA: PortfolioItem[] = [
-  { id: "1", title: "Tech Startup Office Setup", description: "Full procurement of IT infrastructure and office furniture for a growing tech startup.", imageUrl: "https://placehold.co/600x400.png", imageHint: "modern office startup", category: "Office Setup" },
-  { id: "2", title: "Retail Chain AC Upgrade", description: "Installation of 50+ energy-efficient AC units across multiple retail locations.", imageUrl: "https://placehold.co/600x400.png", imageHint: "retail store interior", category: "AC Installation" },
-  { id: "3", title: "Corporate Laptop Refresh", description: "Sourced and configured 200 new laptops for a major corporation's hardware refresh cycle.", imageUrl: "https://placehold.co/600x400.png", imageHint: "laptops meeting", category: "IT Procurement" },
-  { id: "4", title: "Logistics Firm Driver Support", description: "Provided a team of 10 professional drivers for peak season operations.", imageUrl: "https://placehold.co/600x400.png", imageHint: "delivery truck driver", category: "Staff Outsourcing" },
+  { id: "1", title: "Penyiapan Kantor Startup Teknologi", description: "Pengadaan penuh infrastruktur TI dan furnitur kantor untuk startup teknologi yang sedang berkembang.", imageUrl: "https://placehold.co/600x400.png", imageHint: "kantor modern startup", category: "Penyiapan Kantor" },
+  { id: "2", title: "Peningkatan AC Rantai Ritel", description: "Pemasangan 50+ unit AC hemat energi di berbagai lokasi ritel.", imageUrl: "https://placehold.co/600x400.png", imageHint: "interior toko ritel", category: "Instalasi AC" },
+  { id: "3", title: "Pembaruan Laptop Korporat", description: "Pengadaan dan konfigurasi 200 laptop baru untuk siklus pembaruan perangkat keras perusahaan besar.", imageUrl: "https://placehold.co/600x400.png", imageHint: "rapat laptop", category: "Pengadaan TI" },
+  { id: "4", title: "Dukungan Pengemudi Firma Logistik", description: "Menyediakan tim 10 pengemudi profesional untuk operasi musim puncak.", imageUrl: "https://placehold.co/600x400.png", imageHint: "pengemudi truk pengiriman", category: "Outsourcing Staf" },
 ];
 
 export const TIMELINE_EVENTS = [
-  { year: "Early 2024", title: "Inception & Foundation", description: "Procurify Edge was established with a mission to revolutionize procurement services." },
-  { year: "Mid 2024", title: "First Major Client", description: "Secured our first significant contract, showcasing our capability and reliability." },
-  { year: "Late 2024", title: "Service Expansion", description: "Expanded our service offerings to include specialized repairs and staff outsourcing." },
-  { year: "Present", title: "Growing Strong", description: "Continuously building trust and delivering excellence to a growing portfolio of clients." },
+  { year: "Awal 2024", title: "Pendirian & Pembentukan", description: "Procurify Edge didirikan dengan misi untuk merevolusi layanan pengadaan." },
+  { year: "Pertengahan 2024", title: "Klien Besar Pertama", description: "Memperoleh kontrak signifikan pertama kami, menunjukkan kemampuan dan keandalan kami." },
+  { year: "Akhir 2024", title: "Ekspansi Layanan", description: "Memperluas penawaran layanan kami untuk mencakup perbaikan khusus dan outsourcing staf." },
+  { year: "Saat Ini", title: "Tumbuh Kuat", description: "Terus membangun kepercayaan dan memberikan keunggulan kepada portofolio klien yang terus berkembang." },
 ];
 
 export const CONTACT_DETAILS = {
   email: "info@procurifyedge.com",
-  whatsapp: "+1234567890", // Replace with actual number
-  address: "123 Procurement Drive, Business City, BC 12345",
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322839!2d106.81956131476966!3d-6.194741395512957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f427f9a4cf5f%3A0x2234493262258588!2sJakarta!5e0!3m2!1sen!2sid!4v1623743380000!5m2!1sen!2sid" // Example URL, replace
+  whatsapp: "+1234567890", // Ganti dengan nomor sebenarnya
+  address: "Jalan Pengadaan 123, Kota Bisnis, KB 12345",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322839!2d106.81956131476966!3d-6.194741395512957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f427f9a4cf5f%3A0x2234493262258588!2sJakarta!5e0!3m2!1sen!2sid!4v1623743380000!5m2!1sen!2sid" // Contoh URL, ganti
 };
+
+    
