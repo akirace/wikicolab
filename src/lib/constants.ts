@@ -1,3 +1,5 @@
+
+import type { LucideIcon } from 'lucide-react';
 import {
   Home,
   Info,
@@ -13,9 +15,9 @@ import {
   Wind,
   Car,
   Sparkles,
-  CheckCircle2,
-  type LucideIcon
+  CheckCircle2
 } from 'lucide-react';
+import type { IconName } from '@/components/shared/IconByName';
 
 export const APP_NAME = "Procurify Edge";
 
@@ -33,40 +35,41 @@ export const NAV_LINKS: NavLink[] = [
   { href: '/contact', label: 'Contact', icon: Mail },
 ];
 
+// This type is used by CORE_SERVICES_OVERVIEW and SERVICES_DATA (via ServiceCategory)
 export type ServiceItem = {
   name: string;
   description: string;
-  icon: LucideIcon;
-  imageHint: string;
+  iconName: IconName; // Changed from icon: LucideIcon
+  imageHint?: string; // Made optional as CORE_SERVICES_OVERVIEW doesn't provide it
 };
 
 export type ServiceCategory = {
   category: string;
-  items: ServiceItem[];
+  items: ServiceItem[]; // Uses the updated ServiceItem
 };
 
 export const CORE_SERVICES_OVERVIEW: ServiceItem[] = [
-  { name: "Product Procurement", description: "Sourcing high-quality products tailored to your business needs, from IT equipment to office essentials.", icon: ShoppingCart, imageHint: "shopping cart products" },
-  { name: "Expert Repair Services", description: "Reliable and efficient repair services for laptops, MacBooks, and other critical equipment.", icon: Wrench, imageHint: "tools repair" },
-  { name: "Staff Outsourcing", description: "Providing skilled and vetted drivers and cleaning staff to support your operations seamlessly.", icon: Users, imageHint: "team collaboration" },
+  { name: "Product Procurement", description: "Sourcing high-quality products tailored to your business needs, from IT equipment to office essentials.", iconName: "ShoppingCart" },
+  { name: "Expert Repair Services", description: "Reliable and efficient repair services for laptops, MacBooks, and other critical equipment.", iconName: "Wrench" },
+  { name: "Staff Outsourcing", description: "Providing skilled and vetted drivers and cleaning staff to support your operations seamlessly.", iconName: "Users" },
 ];
 
 export const SERVICES_DATA: ServiceCategory[] = [
   {
     category: "Product Procurement",
     items: [
-      { name: "Air Conditioners", description: "Efficient and reliable AC units for optimal climate control.", icon: AirVent, imageHint: "air conditioner unit" },
-      { name: "Laptops & Computers", description: "A wide range of laptops and desktops for all professional needs.", icon: Laptop, imageHint: "modern laptop" },
-      { name: "Office Furniture", description: "Ergonomic and stylish furniture to create productive workspaces.", icon: Armchair, imageHint: "office chair desk" },
+      { name: "Air Conditioners", description: "Efficient and reliable AC units for optimal climate control.", iconName: "AirVent", imageHint: "air conditioner unit" },
+      { name: "Laptops & Computers", description: "A wide range of laptops and desktops for all professional needs.", iconName: "Laptop", imageHint: "modern laptop" },
+      { name: "Office Furniture", description: "Ergonomic and stylish furniture to create productive workspaces.", iconName: "Armchair", imageHint: "office chair desk" },
     ]
   },
   {
     category: "Specialized Services",
     items: [
-      { name: "Laptop/MacBook Repair", description: "Expert repairs for all major brands, ensuring minimal downtime.", icon: Wrench, imageHint: "laptop repair tools" },
-      { name: "AC Cleaning & Maintenance", description: "Comprehensive AC cleaning services for improved air quality and efficiency.", icon: Sparkles, imageHint: "cleaning ac unit" },
-      { name: "Driver Staff Outsourcing", description: "Professional and reliable drivers for your transportation needs.", icon: Car, imageHint: "professional driver car" },
-      { name: "Cleaning Staff Outsourcing", description: "Dedicated cleaning personnel for maintaining pristine environments.", icon: Users, imageHint: "cleaning team" },
+      { name: "Laptop/MacBook Repair", description: "Expert repairs for all major brands, ensuring minimal downtime.", iconName: "Wrench", imageHint: "laptop repair tools" },
+      { name: "AC Cleaning & Maintenance", description: "Comprehensive AC cleaning services for improved air quality and efficiency.", iconName: "Sparkles", imageHint: "cleaning ac unit" },
+      { name: "Driver Staff Outsourcing", description: "Professional and reliable drivers for your transportation needs.", iconName: "Car", imageHint: "professional driver car" },
+      { name: "Cleaning Staff Outsourcing", description: "Dedicated cleaning personnel for maintaining pristine environments.", iconName: "Users", imageHint: "cleaning team" },
     ]
   }
 ];

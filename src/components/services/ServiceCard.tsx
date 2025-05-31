@@ -1,3 +1,4 @@
+
 "use client";
 
 import type { ServiceItem } from '@/lib/constants';
@@ -5,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { MotionDiv } from '@/components/shared/MotionDiv';
 import { fadeInItemVariants } from '@/components/shared/SectionWrapper';
 import Image from 'next/image';
+import { IconByName } from '@/components/shared/IconByName';
 
 interface ServiceCardProps {
   service: ServiceItem;
@@ -25,13 +27,13 @@ export function ServiceCard({ service }: ServiceCardProps) {
               alt={service.name} 
               layout="fill" 
               objectFit="cover"
-              data-ai-hint={service.imageHint}
+              data-ai-hint={service.imageHint || service.name.toLowerCase().replace(/\s+/g, ' ')}
             />
         </div>
         <CardHeader>
           <div className="flex items-center gap-3 mb-2">
             <div className="bg-primary/10 text-primary p-2 rounded-md">
-              <service.icon className="h-6 w-6" />
+              <IconByName name={service.iconName} className="h-6 w-6" />
             </div>
             <CardTitle className="text-xl font-semibold">{service.name}</CardTitle>
           </div>

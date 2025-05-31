@@ -1,9 +1,11 @@
+
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CORE_SERVICES_OVERVIEW } from '@/lib/constants';
 import { SectionWrapper, staggerContainerVariants, fadeInItemVariants } from '@/components/shared/SectionWrapper';
 import { motion } from 'framer-motion';
+import { IconByName } from '@/components/shared/IconByName';
 
 export function ServicesOverview() {
   return (
@@ -27,7 +29,7 @@ export function ServicesOverview() {
             <Card className="h-full text-center shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
               <CardHeader>
                 <div className="mx-auto bg-primary/10 text-primary rounded-full p-4 w-fit mb-4">
-                  <service.icon className="h-10 w-10" />
+                  <IconByName name={service.iconName} className="h-10 w-10" />
                 </div>
                 <CardTitle className="text-2xl font-semibold">{service.name}</CardTitle>
               </CardHeader>
