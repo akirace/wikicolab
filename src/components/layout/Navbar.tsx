@@ -47,10 +47,9 @@ export function Navbar() {
                 asChild
                 className={`font-medium ${pathname === link.href ? 'text-primary' : 'text-foreground/80 hover:text-primary'}`}
               >
-                {/* Diagnostic change: Replace Link with div */}
-                <div data-href={link.href}>
+                <Link href={link.href}>
                   <span>{link.label}</span>
-                </div>
+                </Link>
               </Button>
             ))}
             <Button asChild className="ml-4 bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -95,3 +94,5 @@ export function Navbar() {
     </motion.nav>
   );
 }
+
+    
