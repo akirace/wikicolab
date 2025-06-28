@@ -24,7 +24,7 @@ export default function AboutPage() {
               className="text-4xl md:text-5xl font-bold mb-6 tracking-tight"
             />
             <AnimatedText
-              text={`Didirikan pada awal tahun 2024, ${APP_NAME} berdedikasi untuk memfasilitasi kolaborasi dan berbagi pengetahuan di seluruh Nusantara. Kami memberdayakan individu dan komunitas dengan menyediakan platform untuk terhubung, berkreasi, dan berinovasi bersama demi kemajuan bersama.`}
+              text="PT Wiki Collaborations Nusantara adalah perusahaan penyedia barang dan jasa profesional yang berbasis di Indonesia. Kami melayani berbagai kebutuhan operasional instansi pemerintah, BUMN, dan sektor swasta, mulai dari pengadaan barang, penyediaan tenaga kerja, hingga layanan teknis seperti service perangkat IT (laptop & MacBook). Dengan mengusung semangat kolaboratif dan efisiensi, kami hadir untuk menjadi mitra kerja yang terpercaya, solutif, dan berkomitmen terhadap kepuasan klien."
               className="text-lg text-muted-foreground leading-relaxed"
               stagger={0.01}
               delay={0.3}
