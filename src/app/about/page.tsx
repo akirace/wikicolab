@@ -5,7 +5,8 @@ import { AnimatedText } from '@/components/shared/AnimatedText';
 import { APP_NAME, TIMELINE_EVENTS } from '@/lib/constants';
 import { Eye, Target, Users, Zap } from 'lucide-react';
 import Image from 'next/image';
-import { BusinessTimeline } from '@/components/about/BusinessTimeline'; // This component might need content updates
+import { BusinessTimeline } from '@/components/about/BusinessTimeline';
+import { MissionList } from '@/components/about/MissionList';
 
 export const metadata: Metadata = {
   title: 'Tentang Kami',
@@ -61,11 +62,7 @@ export default function AboutPage() {
               <Target className="h-10 w-10 text-accent" />
               <h2 className="text-3xl font-semibold">Misi Kami</h2>
             </div>
-            <AnimatedText
-              text="Menyediakan ruang digital yang inklusif dan mudah diakses untuk berbagi ide, mengembangkan proyek, dan membangun jaringan yang kuat di seluruh Indonesia."
-              className="text-muted-foreground leading-relaxed"
-              stagger={0.01}
-            />
+            <MissionList />
           </div>
         </div>
       </SectionWrapper>
