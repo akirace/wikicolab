@@ -32,7 +32,7 @@ export default function AboutPage() {
           </div>
           <div>
             <Image 
-              src="https://drive.ackermansite.com/index.php/s/kmoycmBJm7sKEJ6/download/Picture1.png" 
+              src="https://placehold.co/600x450.png" 
               alt={`Tim ${APP_NAME}`}
               width={600} 
               height={450}
