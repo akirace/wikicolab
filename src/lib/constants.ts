@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import type { IconName } from '@/components/shared/IconByName';
 
-export const APP_NAME = "Wiki Colloborations Nusantara";
+export const APP_NAME = "PT Wiki Collaborations Nusantara";
 
 export type NavLink = {
   href: string;
@@ -157,8 +157,8 @@ export const TIMELINE_EVENTS = [
 ];
 
 export const CONTACT_DETAILS = {
-  email: "wikicollaborations@gmail.com",
-  whatsapp: "+6285352880958",
-  address: "Kiruntag, Jalan Raya Kelapa Dua, Kebon Jeruk Jakarta Barat",
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.664086913662!2d106.7576923147695!3d-6.180169995527819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f71c84760931%3A0x9705f455a36a118!2sJl.%20Raya%20Kelapa%20Dua%2C%20Kb.%20Jeruk%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sen!2sid!4v1623743380000!5m2!1sen!2sid" // Updated Map URL for Kebon Jeruk, Jakarta Barat
+  email: "wikicollaborationsnusantara@gmail.com",
+  whatsapp: "+6281282556357",
+  address: "Jalan Srengseng Raya, Kembangan, Jakarta Barat",
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.529323758833!2d106.7459140759082!3d-6.194553860683056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f70d5ab5e6ef%3A0x24e6f3344b1a457!2sJl.%20Srengseng%20Raya%2C%20Kembangan%2C%20Kota%20Jakarta%20Barat%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sen!2sid!4v1719464771234!5m2!1sen!2sid"
 };
