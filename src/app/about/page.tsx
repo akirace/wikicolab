@@ -2,10 +2,9 @@
 import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/shared/SectionWrapper';
 import { AnimatedText } from '@/components/shared/AnimatedText';
-import { APP_NAME, TIMELINE_EVENTS } from '@/lib/constants';
-import { Eye, Target, Users, Zap } from 'lucide-react';
+import { APP_NAME } from '@/lib/constants';
+import { Eye, Target } from 'lucide-react';
 import Image from 'next/image';
-import { BusinessTimeline } from '@/components/about/BusinessTimeline';
 import { MissionList } from '@/components/about/MissionList';
 
 export const metadata: Metadata = {
@@ -66,8 +65,6 @@ export default function AboutPage() {
           </div>
         </div>
       </SectionWrapper>
-
-      <BusinessTimeline /> {/* Review content of TIMELINE_EVENTS in constants.ts */}
     </div>
   );
 }
