@@ -32,12 +32,12 @@ export default function AboutPage() {
           </div>
           <div>
             <Image 
-              src="https://images.scalebranding.com/letter-bb-logo-247a0136-9f8e-4292-ae89-63f35076d5a7.jpg" 
+              src="https://drive.ackermansite.com/index.php/s/7Z6PeKS6oPSBs7d/download/logo_wiki_colab.webp" 
               alt={`Tim ${APP_NAME}`}
               width={600} 
               height={450}
               className="rounded-xl shadow-2xl object-cover"
-              data-ai-hint="logo letter"
+              data-ai-hint="logo"
             />
           </div>
         </div>
