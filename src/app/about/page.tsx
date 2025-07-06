@@ -51,7 +51,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-semibold">Visi Kami</h2>
             </div>
             <AnimatedText
-              text="Menjadi platform kolaborasi terdepan yang menyatukan potensi Nusantara untuk inovasi dan kemajuan berkelanjutan."
+              text="Menjadi perusahaan terdepan dalam penyediaan barang dan jasa yang profesional, terpercaya, dan mampu beradaptasi dengan kebutuhan zaman."
               className="text-muted-foreground leading-relaxed"
               stagger={0.01}
             />
