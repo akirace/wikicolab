@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { NAV_LINKS, APP_NAME } from '@/lib/constants';
 import type { NavLink as NavLinkType } from '@/lib/constants';
-import { motion } from 'framer-motion';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -25,11 +24,8 @@ export function Navbar() {
   }, []);
 
   return (
-    <motion.nav 
+    <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
@@ -91,8 +87,7 @@ export function Navbar() {
           </div>
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 }
-
     
