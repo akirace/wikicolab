@@ -15,7 +15,8 @@ import {
   Wind,
   Car,
   Sparkles,
-  CheckCircle2
+  CheckCircle2,
+  Globe
 } from 'lucide-react';
 import type { IconName } from '@/components/shared/IconByName';
 
@@ -54,6 +55,7 @@ export const CORE_SERVICES_OVERVIEW: ServiceItem[] = [
   { name: "Outsourcing Staf", description: "Menyediakan pengemudi dan staf kebersihan yang terampil dan terverifikasi untuk mendukung operasional Anda dengan lancar.", iconName: "Users" },
 ];
 
+// Deprecated: Use DETAILED_SERVICES_DATA for the new services page structure
 export const SERVICES_DATA: ServiceCategory[] = [
   {
     category: "Pengadaan Produk",
@@ -73,6 +75,56 @@ export const SERVICES_DATA: ServiceCategory[] = [
     ]
   }
 ];
+
+export type DetailedServicePoint = {
+  name: string;
+  description: string;
+};
+
+export type DetailedServiceCategory = {
+  category: string;
+  icon: LucideIcon;
+  items: DetailedServicePoint[];
+};
+
+export const DETAILED_SERVICES_DATA: DetailedServiceCategory[] = [
+  {
+    category: "Jasa Layanan Operasional & SDM",
+    icon: Users,
+    items: [
+      { name: "Managed Services", description: "Manajemen penuh atas layanan operasional harian kantor atau fasilitas." },
+      { name: "Driver Services", description: "Pengemudi profesional untuk operasional harian, event, atau kontrak jangka panjang." },
+      { name: "Office Support", description: "Penyedia tenaga kerja seperti OB, kurir, admin, teknisi umum, dan messenger." },
+      { name: "IT Resources Support", description: "Penyedia tenaga kerja seperti Quality Assurance, Java Developer, Back end, Project Manager, Technical Writer, Business Analyst, Solution Analyst, dsb." },
+    ]
+  },
+  {
+    category: "Jasa Service & Teknologi",
+    icon: Wrench,
+    items: [
+      { name: "Service Laptop & MacBook", description: "Perbaikan, upgrade, dan perawatan berkala untuk berbagai tipe laptop, MacBook dan PC." },
+      { name: "IT Support & Maintenance", description: "Dukungan teknis berkala untuk perusahaan, termasuk instalasi, Maintenance AC, Service AC, troubleshooting, dan pengelolaan asset." },
+    ]
+  },
+  {
+    category: "Pengadaan Barang & Jasa",
+    icon: ShoppingCart,
+    items: [
+      { name: "ATK (Alat Tulis Kantor)", description: "Penyediaan alat tulis kantor untuk kebutuhan operasional." },
+      { name: "Elektronik & perangkat IT", description: "Pengadaan laptop, komputer, printer, dan perangkat keras lainnya." },
+      { name: "Peralatan kebersihan dan keamanan", description: "Menyediakan peralatan untuk menjaga kebersihan dan keamanan lingkungan kerja." },
+      { name: "Barang proyek dan kebutuhan khusus lainnya", description: "Pengadaan barang spesifik sesuai dengan kebutuhan proyek Anda." },
+      { name: "Pengadaan via e-catalog atau tender", description: "Memfasilitasi proses pengadaan melalui platform e-catalog pemerintah atau tender." },
+    ]
+  }
+];
+
+export const SERVICE_ADVANTAGES: { title: string; description: string; icon: LucideIcon }[] = [
+  { title: "One-Stop Solution", description: "Dari tenaga kerja, pengadaan, hingga service teknis, semua dalam satu atap.", icon: CheckCircle2 },
+  { title: "Teknisi Ahli", description: "Penanganan ahli untuk service Laptop, MacBook, dan perangkat premium lainnya.", icon: Sparkles },
+  { title: "Jangkauan Nasional", description: "Dukungan layanan yang luas ke berbagai wilayah di seluruh Indonesia.", icon: Globe },
+];
+
 
 export const WHY_CHOOSE_US_POINTS: { title: string; description: string; icon: LucideIcon }[] = [
   { title: "Sumber Terpercaya", description: "Akses ke jaringan luas pemasok tepercaya untuk jaminan kualitas.", icon: CheckCircle2, },
