@@ -32,7 +32,7 @@ export default function ContactPage() {
       </SectionWrapper>
 
       <SectionWrapper id="contact-content" className="bg-background">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
           <MotionDiv
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
