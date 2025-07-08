@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <footer className="bg-muted text-muted-foreground py-12">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
             <Link href="/" className="flex items-center gap-2 text-xl font-headline font-bold text-primary mb-4">
               <Users className="h-7 w-7" /> {/* Changed Icon */}
@@ -57,14 +57,6 @@ export function Footer() {
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-lg font-headline font-semibold text-foreground mb-4">Buletin</h3>
-            <p className="text-sm mb-3">Tetap update dengan proyek dan inisiatif terbaru kami.</p>
-            <form className="flex gap-2">
-              <Input type="email" placeholder="Masukkan email Anda" className="bg-background" />
-              <Button type="submit" variant="default" className="bg-primary hover:bg-primary/90">Berlangganan</Button>
-            </form>
-          </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border/50 text-center text-sm">
