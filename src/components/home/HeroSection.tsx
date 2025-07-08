@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -47,7 +46,7 @@ export function HeroSection() {
         </motion.div>
 
         <AnimatedText 
-          text={`Selamat Datang di ${APP_NAME}`}
+          text={APP_NAME}
           el="h1"
           className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight"
           stagger={0.05}
@@ -85,4 +84,3 @@ export function HeroSection() {
     </section>
   );
 }
-
