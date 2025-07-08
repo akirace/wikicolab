@@ -47,8 +47,8 @@ export function HeroSection() {
           <Image
             src="https://img.aghatis.id/cdn/bG9jYWw6Ly8vd2lraV9jb2xhYl9sb2dvX3RyYW5zcGFyZW50LnBuZw=="
             alt={`${APP_NAME} Logo`}
-            width={128}
-            height={128}
+            width={160}
+            height={160}
             className="mx-auto"
             priority
           />
