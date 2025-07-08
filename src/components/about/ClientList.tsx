@@ -8,7 +8,7 @@ import Image from 'next/image';
 const clients = [
   { 
     name: "PT Bank Mandiri (Persero) Tbk", 
-    logo: "https://img.aghatis.id/kntl/bG9jYWw6Ly8vbG9nb19iYW5rX21hbmRpcmkucG5n" 
+    logo: "https://img.aghatis.id/cdn/bG9jYWw6Ly8vbG9nb19iYW5rX21hbmRpcmkucG5n" 
   },
   { 
     name: "PT Bank Negara Indonesia", 
