@@ -6,6 +6,7 @@ import { APP_NAME } from '@/lib/constants';
 import { Eye, Target } from 'lucide-react';
 import Image from 'next/image';
 import { MissionList } from '@/components/about/MissionList';
+import { ClientList } from '@/components/about/ClientList';
 
 export const metadata: Metadata = {
   title: 'Tentang Kami',
@@ -25,7 +26,7 @@ export default function AboutPage() {
             />
             <AnimatedText
               text="PT Wiki Collaborations Nusantara adalah perusahaan penyedia barang dan jasa profesional yang berbasis di Indonesia. Kami melayani berbagai kebutuhan operasional instansi pemerintah, BUMN, dan sektor swasta, mulai dari pengadaan barang, penyediaan tenaga kerja, hingga layanan teknis seperti service perangkat IT (laptop & MacBook). Dengan mengusung semangat kolaboratif dan efisiensi, kami hadir untuk menjadi mitra kerja yang terpercaya, solutif, dan berkomitmen terhadap kepuasan klien."
-              className="text-lg text-muted-foreground leading-relaxed"
+              className="text-lg text-muted-foreground leading-relaxed text-left"
               stagger={0.01}
               delay={0.3}
             />
@@ -65,6 +66,9 @@ export default function AboutPage() {
           </div>
         </div>
       </SectionWrapper>
+
+      <ClientList />
+
     </div>
   );
 }
