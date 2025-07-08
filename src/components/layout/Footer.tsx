@@ -39,12 +39,6 @@ export function Footer() {
             <h3 className="text-lg font-headline font-semibold text-foreground mb-4">Hubungi Kami</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-primary" />
-                <a href={`mailto:${CONTACT_DETAILS.email}`} className="hover:text-primary transition-colors">
-                  {CONTACT_DETAILS.email}
-                </a>
-              </li>
-              <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
                 <a href={`tel:${CONTACT_DETAILS.whatsapp.replace(/\D/g, '')}`} className="hover:text-primary transition-colors">
                   {CONTACT_DETAILS.whatsapp}

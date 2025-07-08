@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/shared/SectionWrapper';
 import { ContactForm } from '@/components/contact/ContactForm';
 import { CONTACT_DETAILS, APP_NAME } from '@/lib/constants';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 import { AnimatedText } from '@/components/shared/AnimatedText';
 import { MotionDiv } from '@/components/shared/MotionDiv';
 
@@ -43,15 +43,6 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-semibold mb-6">Informasi Kontak</h2>
               <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-medium">Email</h3>
-                    <a href={`mailto:${CONTACT_DETAILS.email}`} className="text-muted-foreground hover:text-primary transition-colors">
-                      {CONTACT_DETAILS.email}
-                    </a>
-                  </div>
-                </div>
                 <div className="flex items-start gap-4">
                   <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
