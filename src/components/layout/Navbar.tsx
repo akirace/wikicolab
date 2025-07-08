@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -31,7 +30,6 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2 text-2xl font-headline font-bold text-primary">
             <Users className="h-8 w-8" /> {/* Changed Icon */}
-            {APP_NAME}
           </Link>
 
           {/* Desktop Navigation */}
