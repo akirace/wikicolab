@@ -1,8 +1,9 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Users } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { APP_NAME } from '@/lib/constants';
 import { AnimatedText } from '@/components/shared/AnimatedText';
@@ -41,8 +42,16 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="mb-6"
         >
-          <Users className="mx-auto h-16 w-16 text-primary mb-6" />
+          <Image
+            src="https://img.aghatis.id/cdn/bG9jYWw6Ly8vd2lraV9jb2xhYl9sb2dvX3RyYW5zcGFyZW50LnBuZw=="
+            alt={`${APP_NAME} Logo`}
+            width={128}
+            height={128}
+            className="mx-auto"
+            priority
+          />
         </motion.div>
 
         <AnimatedText 
