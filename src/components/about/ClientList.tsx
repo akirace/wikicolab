@@ -10,7 +10,10 @@ const clients = [
     name: "PT Bank Mandiri (Persero) Tbk", 
     logo: "https://img.aghatis.id/kntl/bG9jYWw6Ly8vbG9nb19iYW5rX21hbmRpcmkucG5n" 
   },
-  { name: "PT Bank Negara Indonesia", logo: null },
+  { 
+    name: "PT Bank Negara Indonesia", 
+    logo: "https://img.aghatis.id/cdn/bG9jYWw6Ly8vbG9nb19iYW5rX25lZ2FyYV9pbmRvbmVzaWEucG5n" 
+  },
   { name: "PT Wina Mitra Corpora", logo: null },
   { name: "PT Sifang System Indonesia", logo: null }
 ];
