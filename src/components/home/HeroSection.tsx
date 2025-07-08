@@ -68,9 +68,9 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-300">
-            <Link href="/portfolio">
+            <Link href="/services">
               <span>
-                Lihat Proyek Kolaborasi <ArrowRight className="ml-2 h-5 w-5 inline" /> {/* Ensure ArrowRight is treated as inline content */}
+                Lihat Layanan <ArrowRight className="ml-2 h-5 w-5 inline" /> {/* Ensure ArrowRight is treated as inline content */}
               </span>
             </Link>
           </Button>
