@@ -66,7 +66,6 @@ export function Navbar() {
                 <div className="flex flex-col space-y-6">
                   <Link href="/" className="flex items-center gap-2 text-2xl font-headline font-bold text-primary mb-6" onClick={() => setIsOpen(false)}>
                      <Users className="h-8 w-8" /> {/* Changed Icon */}
-                    {APP_NAME}
                   </Link>
                   {NAV_LINKS.map((link) => (
                     <Link
