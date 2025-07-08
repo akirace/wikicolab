@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, Users } from 'lucide-react'; // Changed ShoppingBag to Users
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { NAV_LINKS, APP_NAME } from '@/lib/constants';
 import type { NavLink as NavLinkType } from '@/lib/constants';
 
@@ -62,7 +62,13 @@ export function Navbar() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-full max-w-xs bg-background p-6">
-                <div className="flex flex-col space-y-6">
+                <SheetHeader>
+                  <SheetTitle className="sr-only">Menu Navigasi</SheetTitle>
+                  <SheetDescription className="sr-only">
+                    Pilih halaman yang ingin dituju dari daftar di bawah ini.
+                  </SheetDescription>
+                </SheetHeader>
+                <div className="flex flex-col space-y-6 mt-4">
                   <Link href="/" className="flex items-center gap-2 text-2xl font-headline font-bold text-primary mb-6" onClick={() => setIsOpen(false)}>
                      <Users className="h-8 w-8" /> {/* Changed Icon */}
                      <span>Wiki Collaborations</span>
