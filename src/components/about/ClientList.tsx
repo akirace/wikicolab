@@ -1,15 +1,18 @@
-
 "use client";
 
 import { SectionWrapper, staggerContainerVariants, fadeInItemVariants } from '@/components/shared/SectionWrapper';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { MotionDiv } from '@/components/shared/MotionDiv';
+import Image from 'next/image';
 
 const clients = [
-  "PT Bank Mandiri (Persero) Tbk",
-  "PT Bank Negara Indonesia",
-  "PT Wina Mitra Corpora",
-  "PT Sifang System Indonesia"
+  { 
+    name: "PT Bank Mandiri (Persero) Tbk", 
+    logo: "https://img.aghatis.id/kntl/bG9jYWw6Ly8vbG9nb19iYW5rX21hbmRpcmkucG5n" 
+  },
+  { name: "PT Bank Negara Indonesia", logo: null },
+  { name: "PT Wina Mitra Corpora", logo: null },
+  { name: "PT Sifang System Indonesia", logo: null }
 ];
 
 export function ClientList() {
@@ -22,16 +25,28 @@ export function ClientList() {
         </p>
       </div>
       <MotionDiv
-        className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto"
+        className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto items-stretch"
         variants={staggerContainerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
       >
-        {clients.map((client, index) => (
-          <MotionDiv key={index} variants={fadeInItemVariants}>
-            <Card className="flex items-center justify-center text-center h-full p-6 bg-card border border-border shadow-sm hover:shadow-lg transition-shadow">
-              <p className="font-medium text-sm md:text-base text-card-foreground">{client}</p>
+        {clients.map((client) => (
+          <MotionDiv key={client.name} variants={fadeInItemVariants} className="flex">
+            <Card className="w-full flex items-center justify-center text-center h-40 p-4 bg-white border border-border shadow-sm hover:shadow-lg transition-shadow">
+              {client.logo ? (
+                <div className="relative w-full h-full">
+                  <Image 
+                    src={client.logo} 
+                    alt={client.name} 
+                    layout="fill" 
+                    objectFit="contain"
+                    className="p-2"
+                  />
+                </div>
+              ) : (
+                <p className="font-medium text-sm md:text-base text-card-foreground px-2">{client.name}</p>
+              )}
             </Card>
           </MotionDiv>
         ))}
