@@ -15,7 +15,7 @@ const clients = [
     name: "PT Bank Negara Indonesia", 
     logo: "https://img.aghatis.id/cdn/bG9jYWw6Ly8vbG9nb19iYW5rX25lZ2FyYV9pbmRvbmVzaWEucG5n" 
   },
-  { name: "PT Wina Mitra Corpora", logo: null },
+  { name: "PT Wina Mitra Corpora", logo: "https://img.aghatis.id/cdn/bG9jYWw6Ly8vcHRfcGVuZ2FkYWFuLnBuZw==" },
   { name: "PT Sifang System Indonesia", logo: null }
 ];
 
