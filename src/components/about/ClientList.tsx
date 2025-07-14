@@ -1,3 +1,4 @@
+
 "use client";
 
 import { SectionWrapper, staggerContainerVariants, fadeInItemVariants } from '@/components/shared/SectionWrapper';
@@ -36,14 +37,15 @@ export function ClientList() {
       >
         {clients.map((client) => (
           <MotionDiv key={client.name} variants={fadeInItemVariants} className="flex">
-            <Card className="w-full flex items-center justify-center text-center h-40 p-4 bg-white border border-border shadow-sm hover:shadow-lg transition-shadow">
+            <Card className="w-full flex items-center justify-center text-center h-40 p-4 bg-card border border-border shadow-sm hover:shadow-lg transition-shadow">
               {client.logo ? (
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-24">
                   <Image 
                     src={client.logo} 
                     alt={client.name} 
-                    layout="fill" 
-                    objectFit="contain"
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    style={{ objectFit: 'contain' }}
                     className="p-2"
                   />
                 </div>
