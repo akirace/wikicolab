@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -6,7 +7,6 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { APP_NAME } from '@/lib/constants';
-import { AnimatedText } from '@/components/shared/AnimatedText';
 
 export function HeroSection() {
   return (
@@ -54,12 +54,9 @@ export function HeroSection() {
           />
         </motion.div>
 
-        <AnimatedText 
-          text={APP_NAME}
-          el="h1"
-          className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight"
-          stagger={0.05}
-        />
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+          {APP_NAME}
+        </h1>
         
         <motion.p 
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"

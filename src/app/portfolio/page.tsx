@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/shared/SectionWrapper';
 import { PORTFOLIO_DATA, APP_NAME } from '@/lib/constants'; // PORTFOLIO_DATA might need update
 import { PortfolioCard } from '@/components/portfolio/PortfolioCard';
-import { AnimatedText } from '@/components/shared/AnimatedText';
 import { MotionDiv } from '@/components/shared/MotionDiv';
 import { staggerContainerVariants } from '@/components/shared/SectionWrapper';
 
@@ -17,17 +16,12 @@ export default function PortfolioPage() {
     <div className="pt-20"> {/* Adjust for fixed navbar */}
       <SectionWrapper id="portfolio-hero" className="!pt-24 !pb-16 md:!pt-32 md:!pb-20 bg-gradient-to-b from-background via-blue-50 to-teal-50">
         <div className="text-center">
-          <AnimatedText 
-            text="Kisah Sukses Kolaborasi Kami"
-            el="h1"
-            className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
-          />
-          <AnimatedText
-            text={`Jelajahi pameran proyek di mana ${APP_NAME} telah memfasilitasi kolaborasi yang menghasilkan dampak positif. Setiap proyek mencerminkan dedikasi kami pada inovasi, kebersamaan, dan kemajuan Nusantara.`}
-            className="text-lg text-muted-foreground max-w-3xl mx-auto"
-            stagger={0.01}
-            delay={0.3}
-          />
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            Kisah Sukses Kolaborasi Kami
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Jelajahi pameran proyek di mana ${APP_NAME} telah memfasilitasi kolaborasi yang menghasilkan dampak positif. Setiap proyek mencerminkan dedikasi kami pada inovasi, kebersamaan, dan kemajuan Nusantara.
+          </p>
         </div>
       </SectionWrapper>
 

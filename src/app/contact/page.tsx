@@ -4,7 +4,6 @@ import { SectionWrapper } from '@/components/shared/SectionWrapper';
 import { ContactForm } from '@/components/contact/ContactForm';
 import { CONTACT_DETAILS, APP_NAME } from '@/lib/constants';
 import { Phone, MapPin } from 'lucide-react';
-import { AnimatedText } from '@/components/shared/AnimatedText';
 import { MotionDiv } from '@/components/shared/MotionDiv';
 
 export const metadata: Metadata = {
@@ -17,17 +16,12 @@ export default function ContactPage() {
     <div className="pt-20"> {/* Adjust for fixed navbar */}
        <SectionWrapper id="contact-hero" className="!pt-24 !pb-16 md:!pt-32 md:!pb-20 bg-gradient-to-b from-background via-blue-50 to-teal-50">
         <div className="text-center">
-          <AnimatedText 
-            text="Hubungi Kami"
-            el="h1"
-            className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
-          />
-          <AnimatedText
-            text={`Punya ide kolaborasi atau pertanyaan untuk ${APP_NAME}? Jangan ragu untuk menghubungi kami!`}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
-            stagger={0.01}
-            delay={0.3}
-          />
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            Hubungi Kami
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Punya ide kolaborasi atau pertanyaan untuk ${APP_NAME}? Jangan ragu untuk menghubungi kami!
+          </p>
         </div>
       </SectionWrapper>
 
@@ -47,7 +41,7 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium">Telepon/WhatsApp</h3>
-                    <a href={`https://wa.me/${CONTACT_DETAILS.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                    <a href={`https://wa.me/${CONTACT_DETAILS.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors break-words">
                       {CONTACT_DETAILS.whatsapp}
                     </a>
                   </div>
@@ -56,7 +50,7 @@ export default function ContactPage() {
                   <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium">Alamat</h3>
-                    <p className="text-muted-foreground">{CONTACT_DETAILS.address}</p>
+                    <p className="text-muted-foreground break-words">{CONTACT_DETAILS.address}</p>
                   </div>
                 </div>
               </div>

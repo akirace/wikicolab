@@ -2,7 +2,6 @@
 import type { Metadata } from 'next';
 import { SectionWrapper } from '@/components/shared/SectionWrapper';
 import { DETAILED_SERVICES_DATA, SERVICE_ADVANTAGES, APP_NAME } from '@/lib/constants';
-import { AnimatedText } from '@/components/shared/AnimatedText';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle2 } from 'lucide-react';
 import { MotionDiv } from '@/components/shared/MotionDiv';
@@ -19,17 +18,12 @@ export default function ServicesPage() {
     <div className="pt-20"> {/* Adjust for fixed navbar */}
       <SectionWrapper id="services-hero" className="!pt-24 !pb-16 md:!pt-32 md:!pb-20 bg-gradient-to-b from-background via-blue-50 to-teal-50">
         <div className="text-center">
-          <AnimatedText 
-            text="Layanan Kami"
-            el="h1"
-            className="text-4xl md:text-5xl font-bold mb-4 tracking-tight"
-          />
-          <AnimatedText
-            text={`Kami menyediakan solusi lengkap untuk mendukung operasional bisnis Anda, dari sumber daya manusia, perbaikan & service, hingga pengadaan barang.`}
-            className="text-lg text-muted-foreground max-w-3xl mx-auto"
-            stagger={0.01}
-            delay={0.3}
-          />
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            Layanan Kami
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Kami menyediakan solusi lengkap untuk mendukung operasional bisnis Anda, dari sumber daya manusia, perbaikan & service, hingga pengadaan barang.
+          </p>
         </div>
       </SectionWrapper>
 
