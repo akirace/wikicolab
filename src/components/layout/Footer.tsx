@@ -17,8 +17,8 @@ export function Footer() {
               <Users className="h-7 w-7" /> {/* Changed Icon */}
               {APP_NAME}
             </Link>
-            <p className="text-sm">
-              Platform kolaborasi untuk berbagi pengetahuan dan memajukan Nusantara bersama.
+            <p className="text-sm break-words">
+              PT WCN Hadir untuk berkolaborasi dengan anda.
             </p>
           </div>
 
@@ -38,15 +38,15 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-headline font-semibold text-foreground mb-4">Hubungi Kami</h3>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary" />
-                <a href={`tel:${CONTACT_DETAILS.whatsapp.replace(/\D/g, '')}`} className="hover:text-primary transition-colors">
+              <li className="flex items-start gap-2">
+                <Phone className="h-4 w-4 text-primary mt-1" />
+                <a href={`tel:${CONTACT_DETAILS.whatsapp.replace(/\D/g, '')}`} className="hover:text-primary transition-colors break-words">
                   {CONTACT_DETAILS.whatsapp}
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-primary" />
-                <span>{CONTACT_DETAILS.address}</span>
+              <li className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 text-primary mt-1" />
+                <span className="break-words">{CONTACT_DETAILS.address}</span>
               </li>
             </ul>
           </div>
