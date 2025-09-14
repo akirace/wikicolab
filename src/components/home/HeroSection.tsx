@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -44,8 +45,8 @@ export function HeroSection() {
           <Image
             src="https://img.aghatis.id/cdn/bG9jYWw6Ly8vd2lraV9jb2xhYl9sb2dvX3RyYW5zcGFyZW50LnBuZw=="
             alt={`${APP_NAME} Logo`}
-            width={160}
-            height={160}
+            width={240}
+            height={240}
             className="mx-auto"
             priority
           />
@@ -69,7 +70,7 @@ export function HeroSection() {
           <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-300">
             <Link href="/services">
               <span>
-                Lihat Layanan <ArrowRight className="ml-2 h-5 w-5 inline" /> {/* Ensure ArrowRight is treated as inline content */}
+                Lihat Layanan <ArrowRight className="ml-2 h-5 w-5 inline" />
               </span>
             </Link>
           </Button>
