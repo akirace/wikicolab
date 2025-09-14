@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -38,10 +37,8 @@ export function HeroSection() {
       `}</style>
 
       <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+        <div
+          
           className="mb-6"
         >
           <Image
@@ -52,25 +49,21 @@ export function HeroSection() {
             className="mx-auto"
             priority
           />
-        </motion.div>
+        </div>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
           {APP_NAME}
         </h1>
         
-        <motion.p 
+        <p 
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          
         >
-          Platform kolaborasi Anda untuk berbagi pengetahuan, mengembangkan ide, dan memajukan Nusantara bersama.
-        </motion.p>
+          PT WCN Hadir untuk berkolaborasi dengan anda.
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+        <div
+          
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-300">
@@ -85,7 +78,7 @@ export function HeroSection() {
               <span>Mulai Berkontribusi</span>
             </Link>
           </Button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
