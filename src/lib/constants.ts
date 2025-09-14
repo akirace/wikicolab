@@ -32,7 +32,6 @@ export const NAV_LINKS: NavLink[] = [
   { href: '/', label: 'Beranda', icon: Home },
   { href: '/about', label: 'Tentang Kami', icon: Info },
   { href: '/services', label: 'Layanan', icon: Briefcase },
-  { href: '/portfolio', label: 'Portofolio', icon: LayoutGrid },
   { href: '/contact', label: 'Kontak', icon: Mail },
 ];
 
